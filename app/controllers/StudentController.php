@@ -1,33 +1,21 @@
-<?php
+<?PHP
+    namespace App\Controllers;
  
-namespace App\Core;
-
-use App\Controllers\StudentController;
- 
-class Router
-{
- 
-    public function run(): void
+    class StudentsController
     {
-        $method = $_SERVER['REQUEST_METHOD'];
-        $uri = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
- 
-        if($method == 'GET' && $uri == '/students'){
-            require_once './app/controllers/StudentControl.php';
-            $controller = new Studentcontroller();
-            $controller->index();
-            return;
+        public function index()
+        {
+            echo '<h1>Daftar Siswa</h1>';
+            echo '<p>Menampilkan daftar siswa</p>';
         }
  
-        if($method == 'GET' && $uri == '/students/create'){
-         require_once './app/controllers/StudentControl.php';
-            $controller = new Studentcontroller();
-            $controller->create();
-            return;
+        public function create()
+        {
+            echo '<h1>Tambah Siswa</h1>';
+            echo '<p>Menampilkan form tambah siswa</p>';
         }
- 
-        http_response_code(response_code: 404);
-        echo '<h1>404 - Page Not Found</h1>';
     }
-}
+ 
+ 
+?>
  
