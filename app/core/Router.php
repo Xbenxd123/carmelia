@@ -12,6 +12,7 @@
             $this->routes[] = [
                 'method' => $method,
                 'uri' => $uri,
+                'controller' => $controller,
                 'function' => $function,
             ];
  
@@ -21,7 +22,7 @@
             $method = $_SERVER['REQUEST_METHOD'];
             $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
  
-            foreach(this->routes as $route){
+            foreach($this->routes as $route){
                 $pattern = str_replace(
                     '{id}',
                     '([0-9]+)',
@@ -31,13 +32,13 @@
                 $pattern = '#^' . $pattern . '$#';
 
                 if (preg_match($pattern, $uri, $matches)){
-                require_once './app/controllers/'. $route['controller']. '.php';
+                require_once '../app/controllers/'. $route['controller']. '.php';
                 array_shift($matches);
                 $controllerClass = 'App\\Controllers\\' . $route['controller'];
                 $controller = new $controllerClass();
 
                 $function = $route['function'];
-                call_user_func_array(callback:[$controller, $function], args: $matches);
+                call_user_func_array([$controller, $function], $matches);
 
 
                 return;
