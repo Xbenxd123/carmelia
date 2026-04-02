@@ -33,7 +33,7 @@
                      <thead class="bg-gray-200">
                         <tr>
                            <th class="px-4 py-2 text-left">No</th>
-                           <th class="px-4 py-2 text-left">Nama</th>
+                           <th class="px-4 py   -2 text-left">Nama</th>
                            <th class="px-4 py-2 text-left">NIS</th>
                            <th class="px-4 py-2 text-left">Kelas</th>
                            <th class="px-4 py-2 text-left">No Telepon</th>
