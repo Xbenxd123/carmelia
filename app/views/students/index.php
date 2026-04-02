@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/output.css">
 </head>
 
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col bg-gray-100">
     <!-- Header Start -->
      <header class="bg-blue-500 text-white">
      <div class="flex items-center justify-between container mx-auto p-4">
@@ -19,13 +19,48 @@
 
     <!-- Main start -->
      <main class="container mx-auto grow">
-        <div class="mt-8">
+        <div class="mt-8 space-y-2">
             <!-- Card Header Start -->
-             <div class="p-4 shadow rounded-lg">
+             <div class="p-4 shadow rounded-lg bg-white">
                 <H1 class="text-2xl font-bold">Daftar Siswa</H1>
                 <p>Menampilkan daftar siswa yang terdaftar</p>
              </div>
              <!-- Card Header End -->
+              
+             <!-- Card Body Start -->
+               <div class="bg-white shadow rounded-lg">
+                  <table class="w-full">
+                     <thead class="bg-gray-200">
+                        <tr>
+                           <th class="px-4 py-2 text-left">No</th>
+                           <th class="px-4 py-2 text-left">Nama</th>
+                           <th class="px-4 py-2 text-left">NIS</th>
+                           <th class="px-4 py-2 text-left">Kelas</th>
+                           <th class="px-4 py-2 text-left">No Telepon</th>
+                           <th class="px-4 py-2">Aksi</th>
+                        </tr>
+                     </thead>
+
+                     <tbody>
+                        <tr>
+                           <td class="px-4 py-2 text-left">1</td>
+                           <td class="px-4 py-2 text-left">Andi Boti</td>
+                           <td class="px-4 py-2 text-left">123</td>
+                           <td class="px-4 py-2 text-left">11 TKJ 2</td>
+                           <td class="px-4 py-2 text-left">089693725089</td>
+                          <td class="px-4 py-2">
+                              <Div class="flex justify-center items-center gap-4">
+                                 <a href="" class="text-green-500"> Detail</a>
+                                 <a href="" class="text-yellow-500">Edit</a>
+                                 <a href="" class="text-red-500">Hapus</a>
+                              </Div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table> 
+               </div>
+
+              <!-- Card Body End -->
         </div>
      </main>
     <!-- Main end -->
