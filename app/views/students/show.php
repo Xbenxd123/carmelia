@@ -11,22 +11,22 @@
                     <div class="grid grid-cols-2 gap-4">
                          <div class="space-y-2">
                             <label class="block text-sm font-bold text-gray-700" for="name">Nama</label>
-                            <input class="w-full px-4 py-2 border rounded-lg" type="text" id="name" placeholder="Masukkan nama" name="name" readonly>
+                            <input value="<?= $student['name']?>" class="w-full px-4 py-2 border rounded-lg" type="text" id="name" placeholder="Masukkan nama" name="name" readonly>
                          </div>
     
                          <div class="space-y-2">
                             <label class="block text-sm font-bold text-gray-700" for="nis">NIS</label>
-                            <input class="w-full px-4 py-2 border rounded-lg" type="text" id="nis" placeholder="Masukkan NIS" name="nis" readonly>
+                            <input value="<?= $student['nis']?>" class="w-full px-4 py-2 border rounded-lg" type="text" id="nis" placeholder="Masukkan NIS" name="nis" readonly>
                          </div>
     
                          <div class="space-y-2">
                             <label class="block text-sm font-bold text-gray-700" for="class">Kelas</label>
-                            <input class="w-full px-4 py-2 border rounded-lg" type="text" id="class" placeholder="Masukkan kelas" name="class" readonly>
+                            <input value="<?= $student['class']?>" class="w-full px-4 py-2 border rounded-lg" type="text" id="class" placeholder="Masukkan kelas" name="class" readonly>
                          </div>
 
                          <div class="space-y-2">
                             <label class="block text-sm font-bold text-gray-700" for="phone_number">No Telepon</label>
-                            <input class="w-full px-4 py-2 border rounded-lg" type="text" id="phone_number" placeholder="Masukkan no telepon" name="phone_number" readonly>
+                            <input value="<?= $student['phone_number']?>" class="w-full px-4 py-2 border rounded-lg" type="text" id="phone_number" placeholder="Masukkan no telepon" name="phone_number" readonly>
                          </div> 
     
                          <div class="flex justify-end col-span-2 gap-4">
